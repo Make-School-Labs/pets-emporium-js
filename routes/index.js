@@ -18,7 +18,8 @@ router.get('/login', function(req, res, next) {
 // LOGIN POST
 router.post('/login', function(req, res, next) {
   // jwt.decode(req.token);
-  User.find(req.email, function(err, user) {
+  console.log(req.body)
+  User.findOne({ email: req.body.email }, function (err, user) {
     user.comparePassword(req.body.password, function (err, isMatch) {
       if (!isMatch) {
         return res.status(401).send({ message: 'Wrong email or password' });
@@ -26,8 +27,6 @@ router.post('/login', function(req, res, next) {
       var token = jwt.sign({ _id: user._id }, 'shhhhhhared-secret');
       res.send({ token: token });
     });
-
-    res.send(token);
   })
 });
 
@@ -41,7 +40,7 @@ router.post('/sign-up', function(req, res, next) {
   // Create User and JWT
   console.log(req.body)
   var user = new User(req.body);
-  
+
   user.save(function(err) {
     if (err) { return res.status(400).send(err) }
 

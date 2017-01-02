@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   $('#login-form').submit(function (e) {
     e.preventDefault();
 
@@ -10,8 +11,7 @@ $(document).ready(function() {
       data: user,
       success: function(data) {
         console.log(data.token);
-        // $.cookie("token", data.token);
-        // localStorage.token = data.token;
+        Cookies.set('token', data.token);
       },
       error: function(err) {
         console.log(err);
@@ -37,6 +37,11 @@ $(document).ready(function() {
       }
     });
   });
+
+  $('#logout').click(function (e) {
+    e.preventDefault();
+
+  })
       //     beforeSend: function(xhr) {
       //   if (localStorage.token) {
       //     xhr.setRequestHeader('Authorization', 'Bearer ' + localStorage.token);

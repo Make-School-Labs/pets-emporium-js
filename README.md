@@ -6,6 +6,8 @@
 * Handlebars
 * Bootstrap 3
 * `express-jwt`
+* js-cookie
+* cookie-parser
 * Bower
 * jQuery
 * Mongoose
@@ -18,9 +20,14 @@
 
 ## Authentication Challenges (3 Days)
 
-1. Add "Remember Me" functionality (1 day)
+1. Add a "Logout" action (1 hour)
+1. Create a "/profile" route that shows the current user's information
+1. Show and hide elements based on being logged in or logged out (1 hour)
+1. Display all users in a table on the '/users' page
+1. Protect the '/users' page so that it is only accessible by admins. 
+1. Add "Remember Me" functionality. Remember them on the client and server for 60 days. (1 day)
 2. Add "Forgot your password?" functionality. Can you do it with email? What about text? (2 days)
-3. Add client-side validation using the jQuery Validate plugin for your login and registration pages. (1 day)
+3. Add client-side validation using the jQuery Validate plugin for your login and registration pages. (2 hours)
 
 ## Product Challenges (Infinite Days)
 
