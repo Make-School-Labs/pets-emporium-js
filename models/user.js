@@ -5,14 +5,12 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
-    email           : { type: String, unique: true, required: true }
+    createdAt       : { type: Date }
+  , updatedAt       : { type: Date }
+  
+  , email           : { type: String, unique: true, required: true }
   , password        : { type: String, required: true }
-}, {
-  toObject: {
-    virtuals: true
-  }, toJSON: {
-    virtuals: true
-  }
+  
 });
 
 UserSchema.pre('save', function(next){

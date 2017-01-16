@@ -38,10 +38,9 @@ router.get('/sign-up', function(req, res, next) {
 // SIGN UP POST
 router.post('/sign-up', function(req, res, next) {
   // Create User and JWT
-  console.log(req.body)
   var user = new User(req.body);
 
-  user.save(function(err) {
+  user.save(function (err) {
     if (err) { return res.status(400).send(err) }
 
     var token = jwt.sign({ _id: user._id }, 'shhhhhhared-secret');

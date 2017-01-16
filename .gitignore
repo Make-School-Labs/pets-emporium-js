@@ -1,4 +1,4 @@
 .DS_Store
-.bowerrc
 public/vendor
 node_modules
+todo.txt

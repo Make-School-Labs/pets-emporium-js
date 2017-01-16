@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+  var authToken = Cookies.get('token');
+  if (authToken) {
+    $('.authenticated').show()
+  } else {
+    $('.unauthenticated').show()
+  }
+
   $('#login-form').submit(function (e) {
     e.preventDefault();
 
@@ -12,6 +19,7 @@ $(document).ready(function() {
       success: function(data) {
         console.log(data.token);
         Cookies.set('token', data.token);
+        window.location.href = "/"
       },
       error: function(err) {
         console.log(err);
@@ -41,11 +49,7 @@ $(document).ready(function() {
   $('#logout').click(function (e) {
     e.preventDefault();
 
-  })
-      //     beforeSend: function(xhr) {
-      //   if (localStorage.token) {
-      //     xhr.setRequestHeader('Authorization', 'Bearer ' + localStorage.token);
-      //   }
-      // },
+    // write logout logic here
+  });
 
 });
