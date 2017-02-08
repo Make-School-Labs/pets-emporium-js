@@ -7,7 +7,6 @@ var bodyParser = require('body-parser');
 var exphbs  = require('express-handlebars');
 var jwt = require('express-jwt');
 var mongoose = require('mongoose');
-var cookieParser = require('cookie-parser')
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/jwt-template');
