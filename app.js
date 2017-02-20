@@ -9,11 +9,12 @@ var jwt = require('express-jwt');
 var mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/jwt-template');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/jwt-template');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var posts = require('./routes/posts');
+var posts = require('./routes/comments');
 
 var app = express();
 
@@ -48,6 +49,7 @@ app.use(jwt({
 app.use('/', routes);
 app.use('/users', users);
 app.use('/posts', posts);
+app.use('/posts/:postId/comments', comments);
 
 // catch 404 and forward to error handler
 // app.use(function(req, res, next) {

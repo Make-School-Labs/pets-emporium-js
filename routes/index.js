@@ -11,11 +11,13 @@ router.get('/', function(req, res, next) {
 });
 
 // LOGIN FORM
+// '/sessions/new'
 router.get('/login', function(req, res, next) {
   res.render('users-login');
 });
 
 // LOGIN POST
+// '/sessions'
 router.post('/login', function(req, res, next) {
   // jwt.decode(req.token);
   console.log(req.body)
@@ -31,11 +33,13 @@ router.post('/login', function(req, res, next) {
 });
 
 // SIGN UP FORM
+// '/users/new'
 router.get('/sign-up', function(req, res, next) {
   res.render('users-sign-up');
 });
 
 // SIGN UP POST
+// '/users'
 router.post('/sign-up', function(req, res, next) {
   // Create User and JWT
   var user = new User(req.body);

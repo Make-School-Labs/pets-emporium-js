@@ -10,6 +10,15 @@ router.get('/', function(req, res, next) {
   });
 });
 
+// POSTS SHOW
+router.get('/:id', function(req, res, next) {
+  Post.findById(req.params.id).populate('comments').exec(function (err, post) {
+
+    res.render('posts-show', { post: post });
+  });
+});
+
+
 // CREATE POST
 router.post('/', function(req, res, next) {
   var post = new Post(req.body);
