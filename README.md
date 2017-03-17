@@ -12,29 +12,12 @@
 * jQuery
 * Mongoose
 
-## Setup Challenges (1 Day)
+## Challenges
 
-1. Add "Emmet" to your IED and use it to write html quickly.
-1. Get this project working on your machine.
-1. Research and write out what each of the included libraries of this template handles.
-
-## Authentication Challenges (3 Days)
-
-1. Add a "Logout" action (1 hour)
-1. Create a "/profile" route that shows the current user's information
-1. Show and hide elements based on being logged in or logged out (1 hour)
-1. Display all users in a table on the '/users' page
-1. Protect the '/users' page so that it is only accessible by admins. 
-1. Add "Remember Me" functionality. Remember them on the client and server for 60 days. (1 day)
-2. Add "Forgot your password?" functionality. Can you do it with email? What about text? (2 days)
-3. Add client-side validation using the jQuery Validate plugin for your login and registration pages. (2 hours)
-
-## Product Challenges (Infinite Days)
-
-1. Imagine a project you would like build using this template. Create user narratives, wire frames, and an erd for the minimum viable project of this project. (1 day)
-2. Using your plan, build the 0.1 version of your MVP and push it to Heroku.
-3. Decide on and build your 0.2 version of your MVP.
-4. Decide on and build your 0.3 version of your MVP.
+1. Fork this repo, clone your fork down to your computer, run the project - (30 min)
+1. Add a `<select>` tag in `pets-new` to add a dropdown of pet types. (hint: store pet types as a global variable in `app.js` and then pass it into your template in the controller)
+1. Review the auth tests that are present, add pets tests and (strecth) add comment tests
+1. 
 
 ## Requirements
 

@@ -2,12 +2,15 @@ var express = require('express');
 var router = express.Router();
 
 var User = require('../models/user');
+var Pet = require('../models/pet');
 
 var jwt = require('jsonwebtoken');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('landing', {title: "blah"});
+  Pet.find().exec(function (err, pets) {
+    res.render('pets-index', { pets: pets });
+  })
 });
 
 // LOGIN FORM
@@ -49,7 +52,7 @@ router.post('/sign-up', function(req, res, next) {
 
     var token = jwt.sign({ _id: user._id }, 'shhhhhhared-secret');
 
-    res.send(token);
+    res.send({ token: token });
   })
 });
 
