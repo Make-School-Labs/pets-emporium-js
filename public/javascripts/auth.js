@@ -39,6 +39,7 @@ $(document).ready(function() {
       success: function(data) {
         console.log(data);
         Cookies.set('token', data.token);
+        window.location.href = "/"
       },
       error: function(err) {
         console.log(err);
@@ -48,7 +49,10 @@ $(document).ready(function() {
 
   $('#logout').click(function (e) {
     e.preventDefault();
+    
+    Cookies.remove('token');
 
+    window.location.href = "/"
     // write logout logic here
   });
 

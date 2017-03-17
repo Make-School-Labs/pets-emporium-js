@@ -12,8 +12,9 @@ mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/pets-emporium');
 
 var controllers = require('./controllers/index');
+var auth = require('./controllers/auth');
 var users = require('./controllers/users');
-var posts = require('./controllers/pets');
+var pets = require('./controllers/pets');
 var comments = require('./controllers/comments');
 
 var app = express();
@@ -53,9 +54,10 @@ app.use(jwt({
 }));
 
 app.use('/', controllers);
+app.use('/', auth);
 app.use('/users', users);
-app.use('/posts', posts);
-app.use('/posts/:postId/comments', comments);
+app.use('/pets', pets);
+app.use('/pets/:petId/comments', comments);
 
 // catch 404 and forward to error handler
 // app.use(function(req, res, next) {
