@@ -8,7 +8,7 @@ var CommentSchema = new Schema({
   , updatedAt       : { type: Date }
 
   , body            : { type: String, required: true }
-  , post            : { type: Schema.ObjectId, ref: "Post"}
+  , pet            : { type: Schema.ObjectId, ref: "Pet"}
 });
 
 CommentSchema.pre('save', function(next){

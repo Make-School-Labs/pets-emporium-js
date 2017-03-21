@@ -10,6 +10,7 @@ var PetSchema = new Schema({
   , name            : { type: String, required: true }
   , species         : { type: String }
   , description     : { type: String }
+  
   , comments        : [{ type: Schema.ObjectId, ref: "Comment"}]
 });
 

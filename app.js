@@ -50,6 +50,7 @@ app.use(jwt({
     { url: '/', methods: ['GET']  },
     { url: '/login', methods: ['GET', 'POST']  },
     { url: '/sign-up', methods: ['GET', 'POST']  },
+    { url:  /\/pets/i, methods: ['GET']  }
   ]
 }));
 

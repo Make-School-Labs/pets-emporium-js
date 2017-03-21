@@ -1,11 +1,12 @@
 <div class="row" id="pets">
   {{#each pets}}
-    <div class="col-sm-3">
+    <div class="col-sm-4">
       <div class="thumbnail">
-        
+        <a href="/pets/{{this._id}}">
+          <h3>{{this.name}}</h3>
+        </a>
+        <p>{{this.description}}</p>
       </div>
-      <p>{{this.title}}</p>
-      {{this.description}}
     </div>
   {{/each}}      
 </div>

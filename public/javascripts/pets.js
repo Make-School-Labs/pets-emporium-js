@@ -8,16 +8,10 @@ $(document).ready(function() {
 
     $.ajax({
       type: 'POST',
-      url: '/posts',
+      url: '/pets',
       data: post,
       success: function(data) {
-        $('#posts').prepend(
-          "<div class='list-item'>" + 
-            "<p>" + data.title + "</p>" + 
-            data.description + 
-          "</div>"
-        );
-        // window.location.href = "/posts/" + data._id
+        window.location.href = "/pets/" + data._id
       },
       error: function(err) {
         console.log(err);
