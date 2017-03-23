@@ -12,31 +12,38 @@
 * jQuery
 * Mongoose
 
-## Challenges
+## Initial Challenges
+
+Required Challenges
 
 1. Fork this repo, clone your fork down to your computer, run the project - (30 min)
 1. Add a `<select>` tag in `pets-new` to add a dropdown of pet types. (hint: store pet types as a global variable in `app.js` and then pass it into your template in the controller)
 1. Review the auth tests that are present, add pets tests and (strecth) add comment tests
-1. 
+
+Optional Challenges
+
+1. Remember Me 
+1. Forgot your password? (including sending email or text)
+1. Attractive client side form validation
+1. Model Validation
+1. Attractive error handling
 
 ## Requirements
 
 By the end of this course you will have an NodeJS/ExpressJS project that has the following *Required* features:
 
-1. JWT Authentication
-2. Remember Me 
-3. Forgot your password? (including sending email or text)
-4. Attractive client side form validation
-5. Model Validation
-6. Attractive error handling
+1. Uploading images to S3
+1. WebSocket communication
+1. Credit card payments with Braintree 
 
 ## Options
 
 You may add any optional feature you please from this list or that you find:
 
+* Full text search
 * Google Maps
-* Credit card payments with Stripe or Braintree
 * Edit in Place form elements
-* Text messaging 
+* Sending text messages
+* Sending emails
 
 
